@@ -2,7 +2,6 @@ import openpyxl
 import pymysql
 import re
 
-model_path = "/Users/cyberdriver/Downloads/集团数据资产盘点工作5月8日前提交/样例：SH-QX-DAMS-0001/数据字典v2.xlsx"
 
 dest_path = "test.xlsx"
 
