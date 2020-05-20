@@ -18,8 +18,11 @@ connection = pymysql.connect(host='172.31.47.159',
 head = ["序号", "属性名称",	"属性编码",	"属性描述",	"数据类型",	"字段长度",	"字段格式",	"主键标识",	"非空标识",	"对应主数据",	"系统来源",	"校验规则"]
 
 def write_head(ws):
-    for col in range(len(head)):
-        ws.cell(row=1, column=col+1, value=head[col])
+    #for col in range(len(head)):
+    #    ws.cell(row=1, column=col+1, value=head[col])
+
+    for i, value in enumerate(head):
+        ws.cell(row=1, column=i+1, value=value)
 
 def write_data(ws, connection, table_name):
     write_head(ws)
